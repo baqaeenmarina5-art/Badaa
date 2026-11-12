@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="بدء — تطبيق عربي لتنظيم الوقت وإدارة المهام اليومية: خطة يوم واضحة، وجلسة تركيز بمدة تختارها (٢٥ أو ٤٠ دقيقة أو ساعة)، دون تسجيل ودون إعلانات.">
+<meta name="theme-color" content="#F7F2E8">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="بدء">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<title>بدء — تنظيم الوقت وإدارة المهام اليومية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F2E8; --paper-2:#FFFDF8;
+    --ink:#132A23; --ink-soft:#46584F; --muted:#5D6B63;
+    --line:#DFD8C9; --line-soft:#EBE4D7;
+    --accent:#FF5C35; --accent-soft:#FFE0D6;
+    --lime:#DCEFA0; --sage:#E8EFE4; --green:#3C6E5B;
+    --font-body:'Alexandria','Segoe UI',Tahoma,sans-serif;
+    --font-num:'Space Grotesk','Segoe UI',sans-serif;
+    --nav-h:70px;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;font-family:var(--font-body);background:#E7E0CF;color:var(--ink);line-height:1.8;
+    -webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent;overscroll-behavior-y:none}
+  ::selection{background:var(--accent);color:#fff}
+  button,input{font-family:inherit}
+  button{cursor:pointer;touch-action:manipulation}
+  :focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:8px}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  [hidden]{display:none!important}
+
+  /* هيكل التطبيق */
+  .app{position:relative;max-width:460px;min-height:100vh;min-height:100dvh;margin-inline:auto;background:var(--paper);
+    display:flex;flex-direction:column;box-shadow:0 0 0 1px var(--line),0 30px 80px -30px rgba(19,42,35,.35)}
+  .appbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:12px;
+    padding:calc(env(safe-area-inset-top) + 12px) 18px 10px;background:rgba(247,242,232,.94);
+    -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+  .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
+  .logo-mark{width:40px;height:40px;border-radius:12px;background:var(--ink);color:var(--paper);display:grid;place-items:center;flex-shrink:0}
+  .brand-name{font-size:23px;font-weight:700;line-height:1}
+  .brand-name i{color:var(--accent);font-style:normal}
+  .mini{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:6px 14px;border:0;border-radius:999px;background:var(--ink);color:#fff;
+    font-family:var(--font-num);font-size:15px;font-weight:500;direction:ltr}
+  .mini i{width:8px;height:8px;border-radius:50%;background:var(--accent);animation:blink 2.2s infinite}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+  .main{flex:1;padding:6px 16px calc(var(--nav-h) + env(safe-area-inset-bottom) + 28px)}
+  .panel{animation:rise .3s ease both}
+  @keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+  /* الترحيب والتاريخ */
+  .greet h1{font-size:23px;line-height:1.5;margin:0 0 8px;font-weight:700}
+  .greet h1 span{color:var(--accent)}
+    .date-row{display:flex;align-items:center;justify-content:space-between;gap:6px 12px;flex-wrap:wrap;background:var(--paper-2);
+    border:1px solid var(--line);border-radius:16px;padding:8px 16px;margin-bottom:12px}
+  .date-row b{font-size:14px;font-weight:600}
+  .date-row small{font-size:12px;color:var(--muted)}
+  .date-row em{display:none}
+
+  /* المؤقت */
+  .timer{background:radial-gradient(125% 110% at 95% 0%,#28473B 0%,#19352B 42%,var(--ink) 100%);
+    border:1px solid rgba(255,255,255,.13);border-radius:30px;padding:16px;color:var(--paper-2);
+    box-shadow:0 30px 60px -34px rgba(19,42,35,.7),inset 0 1px 0 rgba(255,255,255,.12)}
+  .timer-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+  .live{display:inline-flex;align-items:center;gap:7px;font-size:12px;color:rgba(255,253,248,.75);
+    background:rgba(255,255,255,.07);padding:5px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.08)}
+  .live i{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px rgba(255,92,53,.14);animation:blink 2.4s infinite}
+  .day-left{font-size:12px;color:var(--lime);display:inline-flex;align-items:center;gap:5px}
+  .field{display:block;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:9px 14px;transition:.2s}
+  .field:focus-within{border-color:rgba(255,92,53,.6);background:rgba(255,255,255,.1)}
+  .field small{display:block;font-size:11.5px;color:rgba(255,253,248,.62);margin-bottom:1px}
+  .field input{display:block;width:100%;border:0;outline:0;background:transparent;color:#fff;font-size:17px;font-weight:500;line-height:1.7;padding:0}
+  .ring-wrap{position:relative;width:100%;max-width:228px;margin:10px auto 10px;aspect-ratio:1}
+  .ring{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+  .ring-track{fill:none;stroke:rgba(255,255,255,.1);stroke-width:9}
+  .ring-bar{fill:none;stroke:var(--accent);stroke-width:9;stroke-linecap:round;stroke-dasharray:829.38;stroke-dashoffset:0;
+    transition:stroke-dashoffset .35s linear;filter:drop-shadow(0 0 6px rgba(255,92,53,.3))}
+  .ring-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;pointer-events:none}
+  .clock{font-family:var(--font-num);font-size:52px;font-weight:500;line-height:1;letter-spacing:-.045em;
+    direction:ltr;unicode-bidi:isolate;font-variant-numeric:tabular-nums;color:#fff}
+  .clock-sub{font-size:13px;color:rgba(255,253,248,.68);margin-top:8px}
+  .dur-label{display:block;font-size:12.5px;color:rgba(255,253,248,.72);margin:0 2px 6px}
+  .dur-opts{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.09);
+    border-radius:14px;padding:4px;margin-bottom:12px}
+  .dur{border:0;background:transparent;color:rgba(247,242,232,.9);font-family:var(--font-num);direction:ltr;font-size:13px;font-weight:500;
+    min-height:44px;padding:8px 4px;border-radius:11px;transition:.2s;white-space:nowrap}
+  .dur:hover:not(:disabled){background:rgba(255,255,255,.12)}
+  .dur.on{background:var(--lime);color:var(--ink);font-weight:600}
+  .dur:disabled{cursor:not-allowed;opacity:.5}
+  .dur.on:disabled{opacity:1}
+  .controls{display:flex;gap:10px}
+  .start{flex:1;display:flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:16px;background:var(--accent);
+    color:#fff;min-height:56px;font-size:16.5px;font-weight:600;transition:.2s;box-shadow:0 10px 22px -10px rgba(255,92,53,.85)}
+  .start:active{transform:scale(.98)}
+  .ico-pause{display:none}
+  .timer.is-running .ico-play{display:none}
+  .timer.is-running .ico-pause{display:block}
+  .timer.is-running .start{background:var(--paper);color:var(--ink);box-shadow:none}
+  .reset{width:56px;height:56px;border-radius:16px;border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.07);
+    display:grid;place-items:center;color:rgba(255,253,248,.8);flex-shrink:0;transition:.2s}
+  .reset:active{background:rgba(255,255,255,.16)}
+  .timer-note{display:flex;align-items:center;justify-content:center;gap:6px;margin:10px 0 0;font-size:12px;color:rgba(255,253,248,.6);text-align:center}
+
+  /* بطاقات */
+  .card{background:var(--paper-2);border:1px solid var(--line-soft);border-radius:26px;padding:18px;min-width:0}
+  .card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+  .card-title{display:flex;align-items:center;gap:11px}
+  .card-ico{width:40px;height:40px;border-radius:12px;background:var(--lime);display:grid;place-items:center;color:var(--ink);flex-shrink:0}
+  .card-title h2{font-size:18px;margin:0;line-height:1.5;font-weight:600}
+  .card-title p{font-size:12.5px;color:var(--muted);margin:0;line-height:1.6}
+  .count{font-family:var(--font-num);font-size:13px;color:var(--ink);background:var(--paper);border:1px solid var(--line);
+    border-radius:999px;padding:3px 11px;white-space:nowrap;direction:ltr;unicode-bidi:isolate}
+  .bar{height:6px;background:#EFE8DB;border-radius:99px;margin:14px 0;overflow:hidden}
+  .bar span{display:block;height:100%;width:0;background:var(--ink);border-radius:99px;transition:width .4s ease}
+
+  /* إضافة مهمة */
+  .add{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+  .add input[type=text]{flex:1 1 100%;min-width:0;min-height:48px;border:1px solid var(--line);background:var(--paper);border-radius:14px;
+    padding:10px 14px;font-size:16px;color:var(--ink);outline:none;transition:.2s}
+  .add input[type=text]::placeholder{color:#8A948D}
+  .add input[type=text]:focus{border-color:var(--ink);background:var(--paper-2)}
+  .add input[type=time]{flex:1;min-width:0;min-height:48px;border:1px solid var(--line);background:var(--paper);border-radius:14px;padding:8px 12px;
+    font-family:var(--font-num);font-size:16px;color:var(--ink-soft);outline:none;direction:ltr;text-align:center;transition:.2s}
+  .add input[type=time]:focus{border-color:var(--ink)}
+  .add button{width:56px;min-height:48px;border:0;border-radius:14px;background:var(--ink);color:var(--paper);display:grid;place-items:center;flex-shrink:0;transition:.2s}
+  .add button:active{background:var(--accent)}
+  .add button:disabled{background:var(--line);color:#8A948D;cursor:not-allowed}
+
+  .filters{display:flex;gap:4px;background:var(--paper);border:1px solid var(--line-soft);border-radius:999px;padding:4px;margin-bottom:6px}
+  .filter{flex:1;border:0;background:transparent;color:var(--muted);font-size:13px;min-height:40px;padding:6px 4px;border-radius:999px;transition:.2s}
+  .filter.on{background:var(--ink);color:var(--paper);font-weight:600}
+
+  ul.tasks{list-style:none;margin:0;padding:0;min-height:96px}
+  .task{display:flex;align-items:center;gap:6px;padding:4px 0;border-bottom:1px dashed var(--line-soft);min-width:0}
+  .task:last-child{border-bottom:0}
+  .task .check{width:44px;height:44px;flex-shrink:0;display:grid;place-items:center}
+  .task input[type=checkbox]{width:24px;height:24px;accent-color:var(--ink);cursor:pointer;margin:0}
+  .task label{flex:1;min-width:0;font-size:16px;line-height:1.7;color:var(--ink);cursor:pointer;overflow-wrap:anywhere;padding-block:8px}
+  .task.done label{text-decoration:line-through;text-decoration-color:#B0B9B2;color:#8E9992}
+  .tag{font-size:12px;padding:3px 9px;border-radius:999px;white-space:nowrap;flex-shrink:0;
+    font-family:var(--font-num);direction:ltr;border:1px solid var(--line);background:var(--paper);color:var(--ink)}
+  .del{width:44px;height:44px;border:0;background:transparent;color:#8E9992;border-radius:12px;display:grid;place-items:center;flex-shrink:0;transition:.2s}
+  .del:active{color:var(--accent);background:var(--accent-soft)}
+  .empty{padding:26px 8px;text-align:center;color:var(--muted);font-size:14px}
+  .card-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:8px;padding-top:12px;
+    border-top:1px solid var(--line-soft);font-size:12.5px;color:var(--muted)}
+  .clear{border:0;background:none;min-height:40px;padding:0 4px;font-size:13px;color:var(--ink-soft);text-decoration:underline;text-underline-offset:3px}
+
+  /* الإنجاز */
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px}
+  .tile{border-radius:18px;padding:14px 12px;border:1px solid var(--line-soft);background:var(--paper-2);min-width:0}
+  .tile.lime{background:var(--lime);border-color:transparent}
+  .tile small{font-size:12px;color:var(--ink-soft);display:block;line-height:1.5;min-height:36px}
+  .tile b{font-family:var(--font-num);font-size:32px;line-height:1;font-weight:500;display:block;margin:6px 0 4px;
+    direction:ltr;text-align:right;letter-spacing:-.04em;color:var(--ink)}
+  .tile em{font-style:normal;font-size:11px;color:var(--muted);line-height:1.5;display:block}
+  .tile.lime em{color:#46531F}
+  .goal{background:var(--ink);border-radius:24px;padding:18px;display:flex;align-items:center;gap:16px;color:var(--paper)}
+  .goal-ring{--p:0;width:96px;height:96px;border-radius:50%;flex-shrink:0;
+    background:conic-gradient(var(--accent) calc(var(--p) * 1%),rgba(255,255,255,.14) 0);display:grid;place-items:center;transition:background .4s}
+  .goal-inner{width:74px;height:74px;border-radius:50%;background:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center}
+  .goal-inner b{font-family:var(--font-num);font-size:24px;line-height:1;font-weight:500;color:#fff}
+  .goal-inner small{font-size:11px;color:rgba(247,242,232,.7);margin-top:3px}
+  .goal h2{font-size:17px;font-weight:600;color:var(--paper-2);margin:0 0 4px}
+  .goal p{font-size:13.5px;line-height:1.8;color:rgba(247,242,232,.75);margin:0}
+  .about{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:18px;padding:16px 4px 0;border-top:1px solid var(--line)}
+  .author{display:inline-flex;align-items:center;gap:10px}
+  .author .avatar{width:40px;height:40px;border-radius:12px;background:var(--ink);color:var(--paper);display:grid;place-items:center;font-size:15px;font-weight:700}
+  .author small{display:block;font-size:12px;color:var(--muted);line-height:1.5}
+  .author strong{display:block;font-size:14.5px;font-weight:600;line-height:1.5}
+  .mail{display:inline-flex;align-items:center;gap:7px;min-height:44px;text-decoration:none;font-size:13px;color:var(--ink-soft);
+    background:var(--paper-2);border:1px solid var(--line);border-radius:999px;padding:0 14px;direction:ltr}
+  .privacy{width:100%;margin:0;font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px}
+
+  /* شريط التبويبات */
+  .tabbar{position:fixed;z-index:30;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:460px;
+    display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:8px 10px calc(8px + env(safe-area-inset-bottom));
+    background:rgba(255,253,248,.96);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-top:1px solid var(--line)}
+  .tab{border:0;background:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:54px;padding:4px;
+    border-radius:16px;color:var(--muted);font-size:12px;font-weight:500;transition:.2s}
+  .tab-ico{width:54px;height:30px;border-radius:999px;display:grid;place-items:center;transition:.2s}
+  .tab.on{color:var(--ink);font-weight:600}
+  .tab.on .tab-ico{background:var(--lime)}
+
+  /* التنبيه */
+  .toast{position:fixed;z-index:200;bottom:calc(var(--nav-h) + env(safe-area-inset-bottom) + 14px);left:50%;transform:translate(-50%,14px);
+    display:flex;align-items:center;gap:10px;background:var(--ink);color:var(--paper-2);border:1px solid rgba(255,255,255,.12);
+    border-radius:14px;padding:11px 16px;font-size:13.5px;line-height:1.6;box-shadow:0 18px 45px rgba(19,42,35,.34);
+    opacity:0;pointer-events:none;transition:.25s;width:max-content;max-width:calc(100vw - 32px)}
+  .toast.show{opacity:1;transform:translate(-50%,0)}
+  .toast i{width:24px;height:24px;border-radius:8px;background:rgba(220,239,160,.16);color:var(--lime);display:grid;place-items:center;flex-shrink:0}
+
+  @media (min-width:700px){
+    body{padding-block:20px}
+    .app{min-height:calc(100dvh - 40px);border-radius:36px;overflow:clip}
+    .appbar{border-radius:36px 36px 0 0}
+  }
+  @media (max-width:360px){
+    .clock{font-size:46px}
+    .greet h1{font-size:21px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
+  }
+</style>
+</head>
+<body>
+
+<div class="app">
+  <header class="appbar">
+    <a class="brand" href="#" aria-label="بدء — الصفحة الرئيسية">
+      <span class="logo-mark" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9.4 3h5.2M12 3v2.3"/><circle cx="12" cy="13.7" r="7.2"/><path d="m9.9 13.7 1.5 1.5 2.8-2.8"/></svg>
+      </span>
+      <span class="brand-name">بدء<i>.</i></span>
+    </a>
+    <button class="mini" id="mini" type="button" hidden aria-label="جلسة التركيز جارية، العودة إلى المؤقت"><i aria-hidden="true"></i><span id="miniTime">25:00</span></button>
+  </header>
+
+  <main class="main">
+
+    <!-- التركيز -->
+    <section class="panel" id="panel-timer" data-panel="timer" role="tabpanel" aria-labelledby="tab-timer">
+      <div class="greet">
+        <h1>نظّم يومك، <span>وأنجز ما يهمّك.</span></h1>
+      </div>
+      <div class="date-row">
+        <b id="todayLong">—</b>
+        <small id="todayShort">—</small>
+        <em id="dayLeft">—</em>
+      </div>
+
+      <div class="timer" id="timerCard" aria-label="جلسة التركيز">
+        <div class="timer-top">
+          <span class="live"><i aria-hidden="true"></i> جلسة تركيز</span>
+          <span class="day-left">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <span id="dayLeftShort">—</span>
+          </span>
+        </div>
+
+        <label class="field" for="focusInput">
+          <small>المهمة الحالية</small>
+          <input id="focusInput" type="text" value="مراجعة خطة العمل" maxlength="48" autocomplete="off" spellcheck="false">
+        </label>
+
+        <div class="ring-wrap">
+          <svg class="ring" viewBox="0 0 300 300" aria-hidden="true">
+            <circle class="ring-track" cx="150" cy="150" r="132"/>
+            <circle class="ring-bar" id="ringBar" cx="150" cy="150" r="132" transform="rotate(-90 150 150)"/>
+          </svg>
+          <div class="ring-center">
+            <div class="clock" id="clock" role="timer" aria-live="off">25:00</div>
+            <span class="clock-sub" id="clockSub">دقيقة التركيز</span>
+          </div>
+        </div>
+
+        <div role="group" aria-label="مدة الجلسة">
+          <span class="dur-label">مدة الجلسة</span>
+          <div class="dur-opts">
+            <button class="dur on" type="button" data-min="25" aria-pressed="true">25 minutes</button>
+            <button class="dur" type="button" data-min="40" aria-pressed="false">40 minutes</button>
+            <button class="dur" type="button" data-min="60" aria-pressed="false">1 hour</button>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button class="start" id="startBtn" type="button" aria-pressed="false">
+            <span aria-hidden="true">
+              <svg class="ico-play" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="m14 5-7 7 7 7V5Z"/></svg>
+              <svg class="ico-pause" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>
+            </span>
+            <span id="startText">ابدأ الجلسة</span>
+          </button>
+          <button class="reset" id="resetBtn" type="button" aria-label="إعادة ضبط المؤقت" title="إعادة ضبط المؤقت">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
+          </button>
+        </div>
+
+        <p class="timer-note">بعد انتهاء الجلسة، خذ استراحة قصيرة مدتها خمس دقائق.</p>
+        <div class="sr-only" id="live" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- المهام -->
+    <section class="panel" id="panel-tasks" data-panel="tasks" role="tabpanel" aria-labelledby="tab-tasks" hidden>
+      <div class="card" aria-label="مهام اليوم">
+        <div class="card-head">
+          <div class="card-title">
+            <span class="card-ico" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11h6M9 15h4"/><rect x="4" y="3" width="16" height="18" rx="3"/></svg>
+            </span>
+            <div><h2>خطة اليوم</h2><p>ثلاث مهام كحد أقصى لضمان التركيز.</p></div>
+          </div>
+          <span class="count" id="count">0/3</span>
+        </div>
+        <div class="bar" role="progressbar" aria-label="نسبة إنجاز مهام اليوم" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="bar">
+          <span id="barFill"></span>
+        </div>
+
+        <form class="add" id="taskForm">
+          <label for="taskInput" class="sr-only">نص المهمة</label>
+          <input id="taskInput" type="text" placeholder="اكتب المهمة…" maxlength="80" autocomplete="off">
+          <label for="taskTime" class="sr-only">وقت المهمة (اختياري)</label>
+          <input id="taskTime" type="time" title="وقت المهمة (اختياري)" aria-label="وقت المهمة (اختياري)">
+          <button type="submit" id="addBtn" aria-label="إضافة المهمة" title="إضافة المهمة">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+        </form>
+
+        <div class="filters" role="group" aria-label="تصفية المهام">
+          <button class="filter on" type="button" data-filter="all" aria-pressed="true">الكل</button>
+          <button class="filter" type="button" data-filter="open" aria-pressed="false">قيد التنفيذ</button>
+          <button class="filter" type="button" data-filter="done" aria-pressed="false">المنجزة</button>
+        </div>
+
+        <ul class="tasks" id="taskList"></ul>
+
+        <div class="card-foot">
+          <span id="hint">ثلاث مهام كحد أقصى. ابدأ بأهمّها.</span>
+          <button class="clear" id="clearBtn" type="button" hidden>حذف المنجزة</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- إنجازي -->
+    <section class="panel" id="panel-stats" data-panel="stats" role="tabpanel" aria-labelledby="tab-stats" hidden>
+      <div class="stats">
+        <div class="tile">
+          <small>الجلسات المكتملة</small>
+          <b id="sessions">00</b>
+          <em>بحسب المدة المختارة</em>
+        </div>
+        <div class="tile lime">
+          <small>دقائق التركيز</small>
+          <b id="minutes">0</b>
+          <em>مجموع وقت العمل</em>
+        </div>
+        <div class="tile">
+          <small>المهام المنجزة</small>
+          <b id="doneCount">0</b>
+          <em>من إجمالي خطة اليوم</em>
+        </div>
+      </div>
+
+      <div class="goal">
+        <div class="goal-ring" id="goalRing" role="img" aria-label="هدف اليوم: صفر من ثلاث جلسات">
+          <div class="goal-inner"><b id="goalCount">0</b><small>من ٣</small></div>
+        </div>
+        <div>
+          <h2 id="goalTitle">هدف اليوم</h2>
+          <p id="goalCaption">ثلاث جلسات تكفي لتكون يومك منجزًا.</p>
+        </div>
+      </div>
+
+      <div class="about">
+        <div class="author">
+          <span class="avatar" aria-hidden="true">م</span>
+          <div><small>إعداد</small><strong>المعلمة مارينا البقاعين</strong></div>
+        </div>
+        <a class="mail" href="mailto:bada@gmail.com" data-contact-mail>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          <span data-mail-text>bada@gmail.com</span>
+        </a>
+        <p class="privacy">بياناتك تبقى على جهازك · جميع الحقوق محفوظة © <span id="year">2026</span> بدء</p>
+      </div>
+    </section>
+
+  </main>
+
+  <nav class="tabbar" role="tablist" aria-label="التنقل بين الأقسام">
+    <button class="tab on" id="tab-timer" type="button" role="tab" data-tab="timer" aria-selected="true" aria-controls="panel-timer">
+      <span class="tab-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.4 3h5.2M12 3v2.3"/><circle cx="12" cy="13.7" r="7.2"/><path d="M12 10v4l2.4 1.4"/></svg></span>
+      <span>التركيز</span>
+    </button>
+    <button class="tab" id="tab-tasks" type="button" role="tab" data-tab="tasks" aria-selected="false" aria-controls="panel-tasks" tabindex="-1">
+      <span class="tab-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="m8.5 9.5 1.6 1.6 3-3M8.5 15.5h7"/></svg></span>
+      <span>المهام</span>
+    </button>
+    <button class="tab" id="tab-stats" type="button" role="tab" data-tab="stats" aria-selected="false" aria-controls="panel-stats" tabindex="-1">
+      <span class="tab-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20V11M12 20V5M19 20v-7"/></svg></span>
+      <span>إنجازي</span>
+    </button>
+  </nav>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <i aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></i>
+  <span id="toastText">تم</span>
+</div>
+
+<script>
+(() => {
+  'use strict';
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+
+  /* ===== البريد: عدّل العنوان هنا فقط ===== */
+  const CONTACT_EMAIL = 'bada@gmail.com';
+  const mailHref = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('استفسار عن أداة «بدء»')}`;
+  $$('[data-contact-mail]').forEach(a => { a.href = mailHref; });
+  $$('[data-mail-text]').forEach(el => { el.textContent = CONTACT_EMAIL; });
+
+  const read = (k, f) => { try { const v = localStorage.getItem(k); return v === null ? f : JSON.parse(v); } catch { return f; } };
+  const write = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} };
+  const dayKey = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; };
+
+  /* ===== التاريخ والوقت المتبقي من اليوم ===== */
+  const now = new Date();
+  const longFmt = new Intl.DateTimeFormat('ar', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+  const shortFmt = new Intl.DateTimeFormat('ar', { hour: 'numeric', minute: '2-digit' });
+  $('#todayLong').textContent = longFmt.format(now);
+  $('#todayShort').textContent = `الساعة ${shortFmt.format(now)}`;
+
+  const paintDayLeft = () => {
+    const end = new Date(); end.setHours(23, 59, 59, 999);
+    const ms = end - new Date();
+    const h = Math.floor(ms / 3600000);
+    const m = Math.floor((ms % 3600000) / 60000);
+    $('#dayLeft').textContent = h > 0 ? `بقي من اليوم ${h} ساعة و${m} دقيقة` : `بقي من اليوم ${m} دقيقة`;
+    $('#dayLeftShort').textContent = h > 0 ? `${h} س ${m} د متبقية` : `${m} د متبقية`;
+  };
+  paintDayLeft();
+  setInterval(paintDayLeft, 30000);
+
+  /* ===== التنبيه ===== */
+  const toast = $('#toast'), toastText = $('#toastText');
+  let toastT;
+  const say = (msg, warn = false) => {
+    if (!toast) return;
+    toastText.textContent = msg;
+    const ico = toast.querySelector('i');
+    ico.style.background = warn ? 'rgba(255,92,53,.2)' : 'rgba(220,239,160,.16)';
+    ico.style.color = warn ? '#FF9E84' : 'var(--lime)';
+    toast.classList.add('show');
+    clearTimeout(toastT);
+    toastT = setTimeout(() => toast.classList.remove('show'), 3800);
+  };
+
+  /* ===== التبويبات ===== */
+  const tabs = $$('.tab'), panels = $$('.panel'), mini = $('#mini'), miniTime = $('#miniTime');
+  let activeTab = 'timer';
+  const paintMini = () => {
+    const show = running && activeTab !== 'timer';
+    mini.hidden = !show;
+    if (show) miniTime.textContent = fmt(left);
+  };
+  const showTab = (name, focus = false) => {
+    activeTab = name;
+    tabs.forEach(t => {
+      const on = t.dataset.tab === name;
+      t.classList.toggle('on', on);
+      t.setAttribute('aria-selected', String(on));
+      t.tabIndex = on ? 0 : -1;
+      if (on && focus) t.focus();
+    });
+    panels.forEach(p => { p.hidden = p.dataset.panel !== name; });
+    window.scrollTo(0, 0);
+    paintMini();
+  };
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => showTab(t.dataset.tab));
+    t.addEventListener('keydown', e => {
+      const step = e.key === 'ArrowLeft' ? 1 : e.key === 'ArrowRight' ? -1 : 0; /* الاتجاه من اليمين لليسار */
+      if (!step) return;
+      e.preventDefault();
+      showTab(tabs[(i + step + tabs.length) % tabs.length].dataset.tab, true);
+    });
+  });
+  mini.addEventListener('click', () => showTab('timer'));
+
+  /* ===== المؤقت: ٢٥ أو ٤٠ دقيقة أو ساعة ===== */
+  const timerEl = $('#timerCard'), clock = $('#clock'), ring = $('#ringBar');
+  const startBtn = $('#startBtn'), startText = $('#startText'), resetBtn = $('#resetBtn'), live = $('#live');
+  const focusInput = $('#focusInput'), clockSub = $('#clockSub');
+  const R = 132, C = 2 * Math.PI * R;
+  ring.style.strokeDasharray = String(C);
+  ring.style.strokeDashoffset = '0';
+
+  const OPTIONS = [25, 40, 60];
+  const savedMin = Number(read('bada.minutes.v1', 25));
+  let minutes = OPTIONS.includes(savedMin) ? savedMin : 25;
+  const minLabel = m => (m === 60 ? 'ساعة واحدة' : `${m} دقيقة`);
+  let total = minutes * 60, left = total, running = false, handle = null, endAt = 0, ctx = null;
+
+  const savedFocus = read('bada.focus.v1', 'مراجعة خطة العمل');
+  if (focusInput) {
+    focusInput.value = typeof savedFocus === 'string' && savedFocus.trim() ? savedFocus : 'مراجعة خطة العمل';
+    focusInput.addEventListener('input', () => write('bada.focus.v1', focusInput.value.trim()));
+  }
+
+  const fmt = s => `${String(Math.floor(Math.max(0, s) / 60)).padStart(2, '0')}:${String(Math.max(0, s) % 60).padStart(2, '0')}`;
+
+  const paintTimer = () => {
+    clock.textContent = fmt(left);
+    ring.style.strokeDashoffset = String(C * (1 - (total ? left / total : 0)));
+    timerEl.classList.toggle('is-running', running);
+    startBtn.setAttribute('aria-pressed', String(running));
+    startText.textContent = running ? 'إيقاف مؤقت' : (left < total && left > 0 ? 'استئناف الجلسة' : 'ابدأ الجلسة');
+    clockSub.textContent = running ? 'جارٍ التركيز' : 'دقيقة التركيز';
+    document.title = running ? `${fmt(left)} · جلسة تركيز — بدء` : 'بدء — تنظيم الوقت وإدارة المهام اليومية';
+    $$('.dur').forEach(b => {
+      const on = Number(b.dataset.min) === minutes;
+      b.classList.toggle('on', on);
+      b.setAttribute('aria-pressed', String(on));
+      b.disabled = running;
+    });
+    paintMini();
+  };
+
+  const audio = () => {
+    try {
+      const A = window.AudioContext || window.webkitAudioContext;
+      if (!A) return null;
+      if (!ctx) ctx = new A();
+      if (ctx.state === 'suspended') ctx.resume();
+      return ctx;
+    } catch { return null; }
+  };
+  const chime = () => {
+    const c = audio(); if (!c) return;
+    try {
+      const t0 = c.currentTime;
+      [523.25, 659.25, 783.99].forEach((f, i) => {
+        const o = c.createOscillator(), g = c.createGain(), t = t0 + i * 0.13;
+        o.type = 'sine'; o.frequency.setValueAtTime(f, t);
+        g.gain.setValueAtTime(0.0001, t);
+        g.gain.exponentialRampToValueAtTime(0.07, t + 0.025);
+        g.gain.exponentialRampToValueAtTime(0.0001, t + 0.52);
+        o.connect(g); g.connect(c.destination); o.start(t); o.stop(t + 0.56);
+      });
+    } catch {}
+    try { if (navigator.vibrate) navigator.vibrate([200, 100, 200]); } catch {}
+  };
+
+  /* ===== الإحصاءات ===== */
+  let stats = read('bada.stats.v1', { sessions: 0, minutes: 0, day: dayKey(), daySessions: 0 });
+  stats.sessions = Number(stats.sessions) || 0;
+  stats.minutes = Number(stats.minutes) || 0;
+  stats.daySessions = Number(stats.daySessions) || 0;
+  if (stats.day !== dayKey()) { stats.day = dayKey(); stats.daySessions = 0; write('bada.stats.v1', stats); }
+
+  const paintStats = () => {
+    $('#sessions').textContent = String(stats.sessions).padStart(2, '0');
+    $('#minutes').textContent = String(stats.minutes);
+    const p = Math.min(100, (stats.daySessions / 3) * 100);
+    $('#goalRing').style.setProperty('--p', String(p));
+    $('#goalRing').setAttribute('aria-label', `هدف اليوم: ${stats.daySessions} من ثلاث جلسات`);
+    $('#goalCount').textContent = String(Math.min(stats.daySessions, 3));
+    if (stats.daySessions >= 3) {
+      $('#goalTitle').textContent = 'اكتمل هدف اليوم ✓';
+      $('#goalCaption').textContent = 'أنجزت ثلاث جلسات. كل جلسة إضافية ميزة إضافية.';
+    } else {
+      const n = 3 - stats.daySessions;
+      $('#goalTitle').textContent = 'هدف اليوم';
+      $('#goalCaption').textContent = n === 3 ? 'ثلاث جلسات تكفي لتكون يومك منجزًا.'
+        : `تبقّت ${n} ${n === 1 ? 'جلسة' : 'جلسات'} لاستكمال هدف اليوم.`;
+    }
+  };
+
+  const finish = () => {
+    clearInterval(handle); handle = null; running = false; left = 0; paintTimer(); chime();
+    if (stats.day !== dayKey()) { stats.day = dayKey(); stats.daySessions = 0; }
+    stats.sessions += 1; stats.minutes += minutes; stats.daySessions += 1;
+    write('bada.stats.v1', stats); paintStats();
+    live.textContent = `انتهت الجلسة، وتم تسجيل ${minutes} دقيقة تركيز.`;
+    say(`أحسنت! اكتملت جلسة ${minLabel(minutes)} وسُجّلت في سجلّك.`);
+    left = total; paintTimer();
+  };
+
+  const step = () => {
+    const n = Math.max(0, Math.ceil((endAt - Date.now()) / 1000));
+    if (n !== left) { left = n; paintTimer(); }
+    if (left <= 0) finish();
+  };
+  const start = () => {
+    if (running) return;
+    if (left <= 0) left = total;
+    audio();
+    clearInterval(handle); running = true; endAt = Date.now() + left * 1000;
+    handle = setInterval(step, 250); paintTimer();
+  };
+  const pause = () => {
+    if (!running) return;
+    running = false; left = Math.max(0, Math.ceil((endAt - Date.now()) / 1000)); endAt = 0;
+    clearInterval(handle); handle = null; paintTimer();
+  };
+  const reset = (note = true) => {
+    clearInterval(handle); handle = null; running = false; endAt = 0; left = total; paintTimer();
+    live.textContent = 'أُعيد ضبط المؤقت.';
+    if (note) say(`أُعيد ضبط المؤقت إلى ${minLabel(minutes)}.`, true);
+  };
+
+  startBtn.addEventListener('click', () => {
+    if (running) { pause(); say('توقفت الجلسة مؤقتًا. استأنفها متى شئت.', true); }
+    else { start(); say('بدأت الجلسة. أبعد هاتفك وابدأ بمهمة واحدة.'); }
+  });
+  resetBtn.addEventListener('click', () => reset(true));
+  $$('.dur').forEach(b => b.addEventListener('click', () => {
+    const m = Number(b.dataset.min);
+    if (running || !OPTIONS.includes(m) || m === minutes) return;
+    minutes = m; total = m * 60; write('bada.minutes.v1', m);
+    reset(false);
+    say(`تم اختيار جلسة ${minLabel(m)}.`);
+  }));
+  document.addEventListener('visibilitychange', () => { if (!document.hidden && running) step(); });
+
+  /* ===== المهام: ثلاث كحد أقصى، مع وقت وترتيب ===== */
+  const MAX = 3;
+  const defaults = [
+    { text: 'مراجعة خطة العمل وتحديد الأولوية', time: '09:00', done: true },
+    { text: 'إنجاز التقرير المطلوب', time: '11:30', done: false },
+    { text: 'الردّ على الرسائل المهمة', time: '', done: false }
+  ];
+  let tasks = read('bada.tasks.v2', defaults);
+  if (!Array.isArray(tasks)) tasks = defaults.slice();
+  tasks = tasks.filter(t => t && typeof t.text === 'string').slice(0, MAX)
+    .map(t => ({ text: String(t.text).slice(0, 80), time: typeof t.time === 'string' ? t.time : '', done: Boolean(t.done) }));
+
+  const list = $('#taskList'), form = $('#taskForm'), input = $('#taskInput'), timeInput = $('#taskTime');
+  const fill = $('#barFill'), barEl = $('#bar'), count = $('#count'), hint = $('#hint');
+  const clearBtn = $('#clearBtn'), addBtn = $('#addBtn'), doneEl = $('#doneCount');
+  let filter = 'all';
+  const save = () => write('bada.tasks.v2', tasks);
+
+  const order = arr => arr.slice().sort((a, b) => {
+    if (a.done !== b.done) return a.done ? 1 : -1;
+    if (a.time && b.time) return a.time.localeCompare(b.time);
+    if (a.time) return -1;
+    if (b.time) return 1;
+    return 0;
+  });
+
+  const render = () => {
+    list.innerHTML = '';
+    const done = tasks.filter(t => t.done).length, all = tasks.length;
+    const pct = all ? Math.round((done / all) * 100) : 0;
+    fill.style.width = pct + '%';
+    barEl.setAttribute('aria-valuenow', String(pct));
+    count.textContent = `${done}/${all}`;
+    doneEl.textContent = String(done);
+    addBtn.disabled = all >= MAX;
+
+    const shown = order(tasks).filter(t => filter === 'all' ? true : filter === 'done' ? t.done : !t.done);
+
+    if (!shown.length) {
+      const li = document.createElement('li');
+      li.className = 'empty';
+      li.textContent = filter === 'done' ? 'لا توجد مهام منجزة بعد.' : filter === 'open' ? 'لا توجد مهام قيد التنفيذ.' : 'خطة اليوم فارغة. أضف مهمة واحدة للبدء.';
+      list.appendChild(li);
+    }
+
+    shown.forEach(t => {
+      const i = tasks.indexOf(t);
+      const li = document.createElement('li');
+      li.className = 'task' + (t.done ? ' done' : '');
+
+      const box = document.createElement('span');
+      box.className = 'check';
+      const cb = document.createElement('input');
+      cb.type = 'checkbox'; cb.checked = t.done; cb.id = `t${i}`;
+      cb.setAttribute('aria-label', `تعليم المهمة كمُنجزة: ${t.text}`);
+      box.appendChild(cb);
+
+      const lb = document.createElement('label');
+      lb.htmlFor = cb.id; lb.textContent = t.text;
+
+      li.appendChild(box); li.appendChild(lb);
+
+      if (t.time) {
+        const tg = document.createElement('span');
+        tg.className = 'tag time'; tg.textContent = t.time;
+        tg.setAttribute('aria-label', `الوقت المحدد ${t.time}`);
+        li.appendChild(tg);
+      }
+
+      const del = document.createElement('button');
+      del.type = 'button'; del.className = 'del'; del.title = 'حذف المهمة';
+      del.setAttribute('aria-label', `حذف المهمة: ${t.text}`);
+      del.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6M10 11v5M14 11v5"/></svg>';
+
+      cb.addEventListener('change', () => {
+        tasks[i].done = cb.checked; save(); render();
+        if (cb.checked) say('أُنجزت المهمة. تابع بهدوء.');
+      });
+      del.addEventListener('click', () => {
+        const removed = tasks[i].text;
+        tasks.splice(i, 1); save(); render();
+        say(`حُذفت المهمة: ${removed}`, true);
+      });
+
+      li.appendChild(del);
+      list.appendChild(li);
+    });
+
+    if (!all) hint.textContent = 'ثلاث مهام كحد أقصى. ابدأ بأهمّها.';
+    else if (done === all) hint.textContent = 'أنجزت كل مهامك. خذ استراحة تستحقها.';
+    else hint.textContent = `تبقّت ${all - done} ${all - done === 1 ? 'مهمة' : 'مهام'}. مهمة واحدة في كل مرة.`;
+    clearBtn.hidden = done === 0;
+  };
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const v = input.value.trim();
+    if (!v) { say('اكتب نص المهمة أولًا.', true); input.focus(); return; }
+    if (tasks.length >= MAX) { say('ثلاث مهام تكفي يومك. أنجز واحدة ثم أضف غيرها.', true); return; }
+    tasks.push({ text: v.slice(0, 80), time: timeInput.value || '', done: false });
+    save(); render(); input.value = ''; timeInput.value = '';
+    say('أُضيفت المهمة إلى خطة اليوم.');
+  });
+  clearBtn.addEventListener('click', () => {
+    if (!tasks.some(t => t.done)) return;
+    tasks = tasks.filter(t => !t.done); save(); render();
+    say('حُذفت المهام المنجزة.');
+  });
+
+  $$('.filter').forEach(btn => {
+    btn.addEventListener('click', () => {
+      filter = btn.dataset.filter;
+      $$('.filter').forEach(b => {
+        const on = b === btn;
+        b.classList.toggle('on', on);
+        b.setAttribute('aria-pressed', String(on));
+      });
+      render();
+    });
+  });
+
+  $('#year').textContent = String(new Date().getFullYear());
+  paintTimer(); paintStats(); render(); showTab('timer');
+})();
+</script>
+</body>
+</html>
